@@ -8,8 +8,7 @@ namespace AnimalShelter.Models
     public string Name { get; set; }
     public string Type { get; set; }
     public string Breed { get; set; }
-    public bool Gender { get; set; }
-    // true = female & false = male
+    public string Gender { get; set; }
     public DateTime DateOfAdmittance { get; set; }
   }
 }

@@ -1,0 +1,9 @@
+@model AnimalShelter.Models.Animal
+
+<h2>Animal Details:</h2>
+<hr />
+<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+<p>@Html.DisplayFor(model => model.Gender) @Html.DisplayFor(model => model.Type) (@Html.DisplayFor(model => model.Breed))</p>
+<p>Date of Admittance: @Html.DisplayFor(model => model.DateOfAdmittance.Month)/@Html.DisplayFor(model => model.DateOfAdmittance.Day)/@Html.DisplayFor(model => model.DateOfAdmittance.Year)</p>
+<hr />
+<p>@Html.ActionLink("Back to list", "Index")</p>

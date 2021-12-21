@@ -9,7 +9,13 @@
   @Html.TextBoxFor(model => model.Type)
   @Html.LabelFor(model => model.Breed)
   @Html.TextBoxFor(model => model.Breed)
-  @Html.LabelFor(model => model.Gender, "Gender (true = female)")
-  @Html.RadioButtonFor(model => model.Gender, true)
-  @Html.RadioButtonFor(model => model.Gender, false)
+  @Html.LabelFor(model => model.Gender, "Gender: Female")
+  @Html.RadioButtonFor(model => model.Gender, "Female")
+  @Html.LabelFor(model => model.Gender, "Male")
+  @Html.RadioButtonFor(model => model.Gender, "Male")
+  @Html.LabelFor(model => model.DateOfAdmittance)
+  @Html.TextBoxFor(model => model.DateOfAdmittance, "{0:yyyy-MM-dd}", new {@type = "date"})
+  <input type="submit" value="Add new animal" />
 }
+
+<p>@Html.ActionLink("See all animals", "Index", "Animals")</p>
