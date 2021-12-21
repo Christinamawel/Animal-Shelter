@@ -6,12 +6,15 @@
 {
   <h2>No animals currently available</h2>
 }
-
-<ul>
-  @foreach(Animal animal in Model)
-  {
-    <li>@Html.ActionLink($"{animal.Name}, {animal.Type}", "Details", new { id = animal.AnimalId})</li>
-  }
-</ul>
+else
+{
+  <p>@Html.ActionLink("Sort by Longest in Shelter", "Index", new { sortType = 0 })   @Html.ActionLink("Sort by Name", "Index", new { sortType = 1 })   @Html.ActionLink("Sort by Type", "Index", new { sortType = 2 })</p>
+  <ul>
+    @foreach(Animal animal in Model)
+    {
+      <li>@Html.ActionLink($"{animal.Name}, {animal.Type}", "Details", new { id = animal.AnimalId})</li>
+    }
+  </ul>
+}
 
 <p>@Html.ActionLink("Add new animal", "Create")</p>
