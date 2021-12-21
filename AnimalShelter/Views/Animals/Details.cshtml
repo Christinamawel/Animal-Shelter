@@ -7,3 +7,5 @@
 <p>Date of Admittance: @Html.DisplayFor(model => model.DateOfAdmittance.Month)/@Html.DisplayFor(model => model.DateOfAdmittance.Day)/@Html.DisplayFor(model => model.DateOfAdmittance.Year)</p>
 <hr />
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Animal", "Edit", new { id = Model.AnimalId })</p>
+<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.AnimalId })</p>

@@ -1,0 +1,9 @@
+@model AnimalShelter.Models.Animal
+
+<h1>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?<h1>
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to list", "Index")
